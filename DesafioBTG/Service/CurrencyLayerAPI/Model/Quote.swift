@@ -9,5 +9,6 @@ import Foundation
 
 struct QuotesCollection: Codable {
     let success: Bool
+    let source: String
     let quotes: [String: Double]
 }
