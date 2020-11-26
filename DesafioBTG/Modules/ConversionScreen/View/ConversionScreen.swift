@@ -63,7 +63,7 @@ class ConversionScreen: UIView {
         originTF.translatesAutoresizingMaskIntoConstraints = false
         originTF.isUserInteractionEnabled = true
         originTF.placeholder = "0.00"
-        originTF.keyboardType = .numberPad
+        originTF.keyboardType = .numbersAndPunctuation
         originTF.borderStyle = .line
         return originTF
     }()
@@ -127,8 +127,14 @@ class ConversionScreen: UIView {
         convertBtn.titleLabel?.font = UIFont(name: "Futura", size: 20)
         convertBtn.titleLabel?.textAlignment = .center
         convertBtn.titleLabel?.adjustsFontSizeToFitWidth = true
-        convertBtn.addTarget(self, action: #selector(destinationTapped), for: .touchUpInside)
+        convertBtn.addTarget(self, action: #selector(convertTapped), for: .touchUpInside)
         return convertBtn
+    }()
+    
+    var loadingScreen: LoadingScreen = {
+        let loadingScreen = LoadingScreen(frame: .zero)
+        loadingScreen.translatesAutoresizingMaskIntoConstraints = false
+        return loadingScreen
     }()
     
     override init(frame: CGRect = .zero) {
@@ -141,12 +147,54 @@ class ConversionScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    var destination:(()->())?
+    var origin:(()->())?
+    var convert:(()->())?
+    
     @objc func destinationTapped(sender: UIButton) {
-        print("destination")
+        destination!()
     }
     
     @objc func originTapped(sender: UIButton) {
-        print("Origin")
+        origin!()
+    }
+    
+    @objc func convertTapped(sender: UIButton) {
+        convert!()
+    }
+    
+    func loading(_ isLoading: Bool) {
+        if isLoading {
+            titleLabel.isHidden = true
+            convertedLabel.isHidden = true
+            currencieLabel.isHidden = true
+            originStack.isHidden = true
+            originTF.isHidden = true
+            originBtn.isHidden = true
+            destinationStack.isHidden = true
+            destinationTF.isHidden = true
+            destinationBtn.isHidden = true
+            originLabel.isHidden = true
+            destinationLabel.isHidden = true
+            convertBtn.isHidden = true
+            loadingScreen.isHidden = true
+            loadingScreen.isHidden = false
+        }else{
+            titleLabel.isHidden = false
+            convertedLabel.isHidden = false
+            currencieLabel.isHidden = false
+            originStack.isHidden = false
+            originTF.isHidden = false
+            originBtn.isHidden = false
+            destinationStack.isHidden = false
+            destinationTF.isHidden = false
+            destinationBtn.isHidden = false
+            originLabel.isHidden = false
+            destinationLabel.isHidden = false
+            convertBtn.isHidden = false
+            loadingScreen.isHidden = false
+            loadingScreen.isHidden = true
+        }
     }
 }
 
@@ -164,6 +212,7 @@ extension ConversionScreen: CodeView {
         addSubview(originLabel)
         addSubview(destinationLabel)
         addSubview(convertBtn)
+        addSubview(loadingScreen)
     }
     
     
@@ -206,6 +255,11 @@ extension ConversionScreen: CodeView {
             currencieLabel.leadingAnchor.constraint(equalTo: self.convertedLabel.trailingAnchor, constant: 5),
             currencieLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             currencieLabel.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.09),
+            
+            loadingScreen.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            loadingScreen.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            loadingScreen.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            loadingScreen.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
     }
     
