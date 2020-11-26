@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E6EDE6A0256F154500A5243B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDE69F256F154500A5243B /* AppDelegate.swift */; };
+		E6EDE6A2256F154500A5243B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDE6A1256F154500A5243B /* SceneDelegate.swift */; };
+		E6EDE6A4256F154500A5243B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDE6A3256F154500A5243B /* ViewController.swift */; };
+		E6EDE6A7256F154500A5243B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EDE6A5256F154500A5243B /* Main.storyboard */; };
+		E6EDE6AA256F154500A5243B /* DesafioBTG.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6EDE6A8256F154500A5243B /* DesafioBTG.xcdatamodeld */; };
+		E6EDE6AC256F154800A5243B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6EDE6AB256F154800A5243B /* Assets.xcassets */; };
+		E6EDE6AF256F154800A5243B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EDE6AD256F154800A5243B /* LaunchScreen.storyboard */; };
+		E6EDE6BA256F154900A5243B /* DesafioBTGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDE6B9256F154900A5243B /* DesafioBTGTests.swift */; };
+		E6EDE6C5256F154900A5243B /* DesafioBTGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDE6C4256F154900A5243B /* DesafioBTGUITests.swift */; };
+		E6EDE6D8256F161700A5243B /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDE6D7256F161700A5243B /* RequestManager.swift */; };
+		E6EDE6E0256F163400A5243B /* URLSessionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDE6DF256F163400A5243B /* URLSessionRequest.swift */; };
+		E6EDE6E6256F165800A5243B /* CurrencyLayerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDE6E5256F165800A5243B /* CurrencyLayerAPI.swift */; };
+		E6EDE6EE256F166E00A5243B /* CurrencyLayerSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDE6ED256F166E00A5243B /* CurrencyLayerSource.swift */; };
+		E6EDE6F3256F168900A5243B /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDE6F2256F168900A5243B /* Quote.swift */; };
+		E6EDE6F8256F16A000A5243B /* Currencie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDE6F7256F16A000A5243B /* Currencie.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6EDE6B6256F154900A5243B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6EDE694256F154500A5243B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6EDE69B256F154500A5243B;
+			remoteInfo = DesafioBTG;
+		};
+		E6EDE6C1256F154900A5243B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6EDE694256F154500A5243B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6EDE69B256F154500A5243B;
+			remoteInfo = DesafioBTG;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E6EDE69C256F154500A5243B /* DesafioBTG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioBTG.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6EDE69F256F154500A5243B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E6EDE6A1256F154500A5243B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E6EDE6A3256F154500A5243B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E6EDE6A6256F154500A5243B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E6EDE6A9256F154500A5243B /* DesafioBTG.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DesafioBTG.xcdatamodel; sourceTree = "<group>"; };
+		E6EDE6AB256F154800A5243B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6EDE6AE256F154800A5243B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E6EDE6B0256F154800A5243B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6EDE6B5256F154900A5243B /* DesafioBTGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioBTGTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6EDE6B9256F154900A5243B /* DesafioBTGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioBTGTests.swift; sourceTree = "<group>"; };
+		E6EDE6BB256F154900A5243B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6EDE6C0256F154900A5243B /* DesafioBTGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioBTGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6EDE6C4256F154900A5243B /* DesafioBTGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioBTGUITests.swift; sourceTree = "<group>"; };
+		E6EDE6C6256F154900A5243B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6EDE6D7256F161700A5243B /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		E6EDE6DF256F163400A5243B /* URLSessionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionRequest.swift; sourceTree = "<group>"; };
+		E6EDE6E5256F165800A5243B /* CurrencyLayerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLayerAPI.swift; sourceTree = "<group>"; };
+		E6EDE6ED256F166E00A5243B /* CurrencyLayerSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLayerSource.swift; sourceTree = "<group>"; };
+		E6EDE6F2256F168900A5243B /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		E6EDE6F7256F16A000A5243B /* Currencie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencie.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6EDE699256F154500A5243B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6EDE6B2256F154900A5243B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6EDE6BD256F154900A5243B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E6EDE693256F154500A5243B = {
+			isa = PBXGroup;
+			children = (
+				E6EDE69E256F154500A5243B /* DesafioBTG */,
+				E6EDE6B8256F154900A5243B /* DesafioBTGTests */,
+				E6EDE6C3256F154900A5243B /* DesafioBTGUITests */,
+				E6EDE69D256F154500A5243B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E6EDE69D256F154500A5243B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDE69C256F154500A5243B /* DesafioBTG.app */,
+				E6EDE6B5256F154900A5243B /* DesafioBTGTests.xctest */,
+				E6EDE6C0256F154900A5243B /* DesafioBTGUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6EDE69E256F154500A5243B /* DesafioBTG */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDE6D5256F15F800A5243B /* Service */,
+				E6EDE69F256F154500A5243B /* AppDelegate.swift */,
+				E6EDE6A1256F154500A5243B /* SceneDelegate.swift */,
+				E6EDE6A3256F154500A5243B /* ViewController.swift */,
+				E6EDE6A5256F154500A5243B /* Main.storyboard */,
+				E6EDE6AB256F154800A5243B /* Assets.xcassets */,
+				E6EDE6AD256F154800A5243B /* LaunchScreen.storyboard */,
+				E6EDE6B0256F154800A5243B /* Info.plist */,
+				E6EDE6A8256F154500A5243B /* DesafioBTG.xcdatamodeld */,
+			);
+			path = DesafioBTG;
+			sourceTree = "<group>";
+		};
+		E6EDE6B8256F154900A5243B /* DesafioBTGTests */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDE6B9256F154900A5243B /* DesafioBTGTests.swift */,
+				E6EDE6BB256F154900A5243B /* Info.plist */,
+			);
+			path = DesafioBTGTests;
+			sourceTree = "<group>";
+		};
+		E6EDE6C3256F154900A5243B /* DesafioBTGUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDE6C4256F154900A5243B /* DesafioBTGUITests.swift */,
+				E6EDE6C6256F154900A5243B /* Info.plist */,
+			);
+			path = DesafioBTGUITests;
+			sourceTree = "<group>";
+		};
+		E6EDE6D5256F15F800A5243B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDE6E4256F164500A5243B /* CurrencyLayerAPI */,
+				E6EDE6D6256F160100A5243B /* RequestManager */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E6EDE6D6256F160100A5243B /* RequestManager */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDE6D7256F161700A5243B /* RequestManager.swift */,
+				E6EDE6DF256F163400A5243B /* URLSessionRequest.swift */,
+			);
+			path = RequestManager;
+			sourceTree = "<group>";
+		};
+		E6EDE6E4256F164500A5243B /* CurrencyLayerAPI */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDE702256F1C9100A5243B /* Model */,
+				E6EDE6E5256F165800A5243B /* CurrencyLayerAPI.swift */,
+				E6EDE6ED256F166E00A5243B /* CurrencyLayerSource.swift */,
+			);
+			path = CurrencyLayerAPI;
+			sourceTree = "<group>";
+		};
+		E6EDE702256F1C9100A5243B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDE6F2256F168900A5243B /* Quote.swift */,
+				E6EDE6F7256F16A000A5243B /* Currencie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6EDE69B256F154500A5243B /* DesafioBTG */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6EDE6C9256F154900A5243B /* Build configuration list for PBXNativeTarget "DesafioBTG" */;
+			buildPhases = (
+				E6EDE698256F154500A5243B /* Sources */,
+				E6EDE699256F154500A5243B /* Frameworks */,
+				E6EDE69A256F154500A5243B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DesafioBTG;
+			productName = DesafioBTG;
+			productReference = E6EDE69C256F154500A5243B /* DesafioBTG.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E6EDE6B4256F154900A5243B /* DesafioBTGTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6EDE6CC256F154900A5243B /* Build configuration list for PBXNativeTarget "DesafioBTGTests" */;
+			buildPhases = (
+				E6EDE6B1256F154900A5243B /* Sources */,
+				E6EDE6B2256F154900A5243B /* Frameworks */,
+				E6EDE6B3256F154900A5243B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6EDE6B7256F154900A5243B /* PBXTargetDependency */,
+			);
+			name = DesafioBTGTests;
+			productName = DesafioBTGTests;
+			productReference = E6EDE6B5256F154900A5243B /* DesafioBTGTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E6EDE6BF256F154900A5243B /* DesafioBTGUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6EDE6CF256F154900A5243B /* Build configuration list for PBXNativeTarget "DesafioBTGUITests" */;
+			buildPhases = (
+				E6EDE6BC256F154900A5243B /* Sources */,
+				E6EDE6BD256F154900A5243B /* Frameworks */,
+				E6EDE6BE256F154900A5243B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6EDE6C2256F154900A5243B /* PBXTargetDependency */,
+			);
+			name = DesafioBTGUITests;
+			productName = DesafioBTGUITests;
+			productReference = E6EDE6C0256F154900A5243B /* DesafioBTGUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6EDE694256F154500A5243B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					E6EDE69B256F154500A5243B = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					E6EDE6B4256F154900A5243B = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = E6EDE69B256F154500A5243B;
+					};
+					E6EDE6BF256F154900A5243B = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = E6EDE69B256F154500A5243B;
+					};
+				};
+			};
+			buildConfigurationList = E6EDE697256F154500A5243B /* Build configuration list for PBXProject "DesafioBTG" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6EDE693256F154500A5243B;
+			productRefGroup = E6EDE69D256F154500A5243B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6EDE69B256F154500A5243B /* DesafioBTG */,
+				E6EDE6B4256F154900A5243B /* DesafioBTGTests */,
+				E6EDE6BF256F154900A5243B /* DesafioBTGUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6EDE69A256F154500A5243B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6EDE6AF256F154800A5243B /* LaunchScreen.storyboard in Resources */,
+				E6EDE6AC256F154800A5243B /* Assets.xcassets in Resources */,
+				E6EDE6A7256F154500A5243B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6EDE6B3256F154900A5243B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6EDE6BE256F154900A5243B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6EDE698256F154500A5243B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6EDE6D8256F161700A5243B /* RequestManager.swift in Sources */,
+				E6EDE6A4256F154500A5243B /* ViewController.swift in Sources */,
+				E6EDE6F8256F16A000A5243B /* Currencie.swift in Sources */,
+				E6EDE6A0256F154500A5243B /* AppDelegate.swift in Sources */,
+				E6EDE6A2256F154500A5243B /* SceneDelegate.swift in Sources */,
+				E6EDE6F3256F168900A5243B /* Quote.swift in Sources */,
+				E6EDE6E0256F163400A5243B /* URLSessionRequest.swift in Sources */,
+				E6EDE6EE256F166E00A5243B /* CurrencyLayerSource.swift in Sources */,
+				E6EDE6AA256F154500A5243B /* DesafioBTG.xcdatamodeld in Sources */,
+				E6EDE6E6256F165800A5243B /* CurrencyLayerAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6EDE6B1256F154900A5243B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6EDE6BA256F154900A5243B /* DesafioBTGTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6EDE6BC256F154900A5243B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6EDE6C5256F154900A5243B /* DesafioBTGUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6EDE6B7256F154900A5243B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6EDE69B256F154500A5243B /* DesafioBTG */;
+			targetProxy = E6EDE6B6256F154900A5243B /* PBXContainerItemProxy */;
+		};
+		E6EDE6C2256F154900A5243B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6EDE69B256F154500A5243B /* DesafioBTG */;
+			targetProxy = E6EDE6C1256F154900A5243B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E6EDE6A5256F154500A5243B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6EDE6A6256F154500A5243B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E6EDE6AD256F154800A5243B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6EDE6AE256F154800A5243B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E6EDE6C7256F154900A5243B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E6EDE6C8256F154900A5243B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6EDE6CA256F154900A5243B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DRP2X5MTUR;
+				INFOPLIST_FILE = DesafioBTG/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fabiofranca.DesafioBTG;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E6EDE6CB256F154900A5243B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DRP2X5MTUR;
+				INFOPLIST_FILE = DesafioBTG/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fabiofranca.DesafioBTG;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E6EDE6CD256F154900A5243B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DRP2X5MTUR;
+				INFOPLIST_FILE = DesafioBTGTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fabiofranca.DesafioBTGTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesafioBTG.app/DesafioBTG";
+			};
+			name = Debug;
+		};
+		E6EDE6CE256F154900A5243B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DRP2X5MTUR;
+				INFOPLIST_FILE = DesafioBTGTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fabiofranca.DesafioBTGTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesafioBTG.app/DesafioBTG";
+			};
+			name = Release;
+		};
+		E6EDE6D0256F154900A5243B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DRP2X5MTUR;
+				INFOPLIST_FILE = DesafioBTGUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fabiofranca.DesafioBTGUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DesafioBTG;
+			};
+			name = Debug;
+		};
+		E6EDE6D1256F154900A5243B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DRP2X5MTUR;
+				INFOPLIST_FILE = DesafioBTGUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fabiofranca.DesafioBTGUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DesafioBTG;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6EDE697256F154500A5243B /* Build configuration list for PBXProject "DesafioBTG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6EDE6C7256F154900A5243B /* Debug */,
+				E6EDE6C8256F154900A5243B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6EDE6C9256F154900A5243B /* Build configuration list for PBXNativeTarget "DesafioBTG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6EDE6CA256F154900A5243B /* Debug */,
+				E6EDE6CB256F154900A5243B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6EDE6CC256F154900A5243B /* Build configuration list for PBXNativeTarget "DesafioBTGTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6EDE6CD256F154900A5243B /* Debug */,
+				E6EDE6CE256F154900A5243B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6EDE6CF256F154900A5243B /* Build configuration list for PBXNativeTarget "DesafioBTGUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6EDE6D0256F154900A5243B /* Debug */,
+				E6EDE6D1256F154900A5243B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E6EDE6A8256F154500A5243B /* DesafioBTG.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E6EDE6A9256F154500A5243B /* DesafioBTG.xcdatamodel */,
+			);
+			currentVersion = E6EDE6A9256F154500A5243B /* DesafioBTG.xcdatamodel */;
+			path = DesafioBTG.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E6EDE694256F154500A5243B /* Project object */;
+}
