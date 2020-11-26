@@ -37,6 +37,7 @@ class MainCoordinator {
         vc.currencie = currencie
         vc.screen = screen
         vc.coordinator = self
+        screen.selected = vc.selected(key:)
         nav.pushViewController(vc, animated: true)
     }
 }

@@ -24,6 +24,8 @@ class CurrencieListViewController: UIViewController {
         screen?.currencies = currencie?.currencies
     }
     
-
+    func selected(key: String) {
+        
+    }
 
 }
