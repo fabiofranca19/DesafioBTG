@@ -29,10 +29,12 @@ class MainCoordinator {
         nav.pushViewController(vc, animated: false)
     }
     
-    func currencieListTapped(currencie: CurrencieCollection) {
+    func currencieListTapped(delegate: CurrencieListDelegate,currencie: CurrencieCollection, buttonTag: Int) {
         let screen = CurrencieListScreen()
         let viewModel = CurrencieListViewModel()
         let vc = CurrencieListViewController()
+        vc.buttonTag = buttonTag
+        vc.delegate = delegate
         vc.viewModel = viewModel
         vc.currencie = currencie
         vc.screen = screen

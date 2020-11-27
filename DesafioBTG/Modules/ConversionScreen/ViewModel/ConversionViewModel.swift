@@ -21,4 +21,13 @@ class ConversionViewModel {
     func getCurrencie(completion: @escaping (Result<CurrencieCollection,Error>)-> Void) {
         api.getCurrencie(completion: completion)
     }
+    
+    func convert(originQuote: Double, destinationQuote: Double, originValue: Double) -> Double{
+        if destinationQuote == 1 {
+            return Double(originValue / originQuote).arredonda(casasDecimais: 2)
+        }
+        let originConvertedDollar = originValue / originQuote
+        return Double(destinationQuote * originConvertedDollar).arredonda(casasDecimais: 2)
+    }
+
 }

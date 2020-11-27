@@ -30,13 +30,6 @@ class CurrencieListScreen: UIView {
     }
     
     override func didMoveToWindow() {
-        print(currencies)
-        if let currencies = currencies {
-            for(key,value) in currencies {
-                currenciesKey.append(key)
-            }
-        }
-        self.currenciesKey = currenciesKey.sorted{ $0 < $1 }
         self.currenciesTableView.reloadData()
     }
     

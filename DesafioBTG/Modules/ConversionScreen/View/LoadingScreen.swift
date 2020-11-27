@@ -42,3 +42,4 @@ extension LoadingScreen: CodeView {
         self.backgroundColor?.withAlphaComponent(0.6)
     }
 }
+

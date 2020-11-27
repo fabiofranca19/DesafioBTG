@@ -8,12 +8,13 @@
 import Foundation
 
 class URLSessionRequest: RequestManager {
-    
-    func request<T>(url: URL, method: HTTPMethods, headers: [String : String], completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
+    let userDefaults = UserDefaults.standard
+
+    func request<T>(url: URL, method: HTTPMethods, headers: [String : String], userDefaultsKey: String,completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
         
         let request = createRequest(url: url, method: method, headers: headers)
         
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+        URLSession.shared.dataTask(with: request) { [self] (data, response, error) in
             if let error = error {
                 completion(.failure(error))
             }
@@ -21,6 +22,7 @@ class URLSessionRequest: RequestManager {
             if let data = data {
                 do {
                     let object = try JSONDecoder().decode(T.self, from: data)
+                    userDefaults.setValue(data, forKey: userDefaultsKey)
                     completion(.success(object))
                 } catch {
                     debugPrint(error)

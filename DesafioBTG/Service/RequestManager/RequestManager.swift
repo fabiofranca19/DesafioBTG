@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RequestManager {
-    func request<T:Decodable>(url: URL, method: HTTPMethods,headers:[String:String], completion: @escaping(Result<T,Error>) -> Void)
+    func request<T:Decodable>(url: URL, method: HTTPMethods,headers:[String:String],userDefaultsKey: String,completion: @escaping(Result<T,Error>) -> Void)
 }
 
 enum RequestManagerFactory {

@@ -105,6 +105,7 @@ class ConversionScreen: UIView {
         originBtn.titleLabel?.font = UIFont(name: "Futura", size: 20)
         originBtn.titleLabel?.adjustsFontSizeToFitWidth = true
         originBtn.addTarget(self, action: #selector(originTapped), for: .touchUpInside)
+        originBtn.tag = 0
         return originBtn
     }()
     
@@ -116,6 +117,7 @@ class ConversionScreen: UIView {
         destinationBtn.titleLabel?.font = UIFont(name: "Futura", size: 20)
         destinationBtn.titleLabel?.adjustsFontSizeToFitWidth = true
         destinationBtn.addTarget(self, action: #selector(destinationTapped), for: .touchUpInside)
+        destinationBtn.tag = 1
         return destinationBtn
     }()
     
@@ -128,6 +130,7 @@ class ConversionScreen: UIView {
         convertBtn.titleLabel?.textAlignment = .center
         convertBtn.titleLabel?.adjustsFontSizeToFitWidth = true
         convertBtn.addTarget(self, action: #selector(convertTapped), for: .touchUpInside)
+        convertBtn.tag = 2
         return convertBtn
     }()
     
@@ -139,7 +142,7 @@ class ConversionScreen: UIView {
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
-        self.backgroundColor = .white
+        self.backgroundColor = #colorLiteral(red: 0.9333333333, green: 0.937254902, blue: 0.9529411765, alpha: 1)
         setupView()
     }
     
@@ -147,20 +150,49 @@ class ConversionScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    var destination:(()->())?
-    var origin:(()->())?
-    var convert:(()->())?
+    override func didMoveToWindow() {
+        originTF.text = "1"
+        
+    }
+    
+    var originKey: String?
+    var destinationKey: String?
+    
+    var destination:((Int)->())?
+    var origin:((Int)->())?
+    var convert:((Double, String, String)->())?
     
     @objc func destinationTapped(sender: UIButton) {
-        destination!()
+        destination!(sender.tag)
     }
     
     @objc func originTapped(sender: UIButton) {
-        origin!()
+        origin!(sender.tag)
     }
     
-    @objc func convertTapped(sender: UIButton) {
-        convert!()
+    @objc func convertTapped(sender: UIButton = UIButton()) {
+        originTF.text = originTF.text?.replacingOccurrences(of: ",", with: ".")
+        if let valueOrigin = originTF.text!.isEmpty ? 0.0 : Double(originTF.text ?? "0.0") {
+            convert!(valueOrigin,originKey!,destinationKey!)
+        } else {
+            originTF.text = "1"
+            convert!(1,originKey!,destinationKey!)
+        }
+    }
+    
+    func changeBtnTitle(key: String, value: String, buttonTag: Int) {
+        if buttonTag == 0 {
+            originKey = key
+            originBtn.setTitle("\(key) - \(value)", for: .normal)
+        }else if buttonTag == 1 {
+            destinationKey = key
+            destinationBtn.setTitle("\(key) - \(value)", for: .normal)
+        }
+    }
+    
+    func valueWasConverted(convertedValue: Double) {
+        self.convertedLabel.text = "\(convertedValue)"
+        self.destinationTF.text = "\(convertedValue)"
     }
     
     func loading(_ isLoading: Bool) {
@@ -181,8 +213,8 @@ class ConversionScreen: UIView {
             loadingScreen.isHidden = false
         }else{
             titleLabel.isHidden = false
-            convertedLabel.isHidden = false
-            currencieLabel.isHidden = false
+            //convertedLabel.isHidden = false
+            //currencieLabel.isHidden = false
             originStack.isHidden = false
             originTF.isHidden = false
             originBtn.isHidden = false
@@ -264,9 +296,10 @@ extension ConversionScreen: CodeView {
     }
     
     func setupAdditionalConfiguration() {
-        originBtn.backgroundColor = .systemBlue
+        originBtn.backgroundColor = #colorLiteral(red: 0.2705882353, green: 0.4039215686, blue: 0.662745098, alpha: 1)
         destinationTF.backgroundColor = .systemGray3
-        destinationBtn.backgroundColor = .systemBlue
-        convertBtn.backgroundColor = .systemBlue
+        originTF.backgroundColor = .white
+        destinationBtn.backgroundColor = #colorLiteral(red: 0.2705882353, green: 0.4039215686, blue: 0.662745098, alpha: 1)
+        convertBtn.backgroundColor = #colorLiteral(red: 0.2705882353, green: 0.4039215686, blue: 0.662745098, alpha: 1)
     }
 }
