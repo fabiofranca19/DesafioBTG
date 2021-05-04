@@ -12,7 +12,7 @@ class CurrencieListViewModelSpec: XCTestCase {
     var viewModel: CurrencieListViewModel?
     
     override func setUpWithError() throws {
-        viewModel = CurrencieListViewModel()t
+        viewModel = CurrencieListViewModel()
     }
     
     func testSortedCurrenciesKey() {
