@@ -19,7 +19,7 @@ enum CurrencyLayerSource {
 extension CurrencyLayerSource: APISource {
     
     func getURL() -> Result<URL, Error> {
-        let urlString = "http://api.currencylayer.com/@?access_key=e227fc73032297e11d390e80f975cfc0"
+        let urlString = "http://api.currencylayer.com/@?access_key=c5635d130942d22affc88ad99ca51e14"
         
         switch self {
         case .list(let parameters):

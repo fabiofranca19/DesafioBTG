@@ -44,11 +44,11 @@ enum ServiceError: Error{
     var localizedDescription: String{
         switch self {
         case .apiError:
-            return "Algo deu Errado."
+            return "Somithing was wrong."
         case .emptyData:
-        return "Nada foi encontrado."
+            return "Nothing found."
         case .connectionError:
-        return "Você Não está conectado."
+            return "You aren't connect."
         }
     }
 }

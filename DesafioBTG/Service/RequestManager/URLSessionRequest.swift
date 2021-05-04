@@ -31,9 +31,6 @@ class URLSessionRequest: RequestManager {
 
             }
         }.resume()
-        
-        
-        
     }
     
     private func createRequest(url: URL, method: HTTPMethods, headers: [String : String]) -> URLRequest {
